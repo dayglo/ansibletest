@@ -11,6 +11,6 @@
  #   PYTHONPATH: "/usr/lib/python2.7/site-packages/hpOneView/oneview-ansible/library"
   
   tasks:
-    - name: Run a command using a templated variable (always use quote filter to avoid injection)
+    - name: Run 1
       shell: env > /tmp/gee.log
       delegate_to: localhost
