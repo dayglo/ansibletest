@@ -11,6 +11,9 @@
  #   PYTHONPATH: "/usr/lib/python2.7/site-packages/hpOneView/oneview-ansible/library"
   
   tasks:
-    - name: Run 1
-      shell: 'env > /tmp/gee.log'
+    - name: grr
+      script: env
+      register: out
       delegate_to: localhost
+
+    - debug: var=out.stdout_lines
