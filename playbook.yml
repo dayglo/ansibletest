@@ -12,7 +12,7 @@
   
   tasks:
     - name: grr
-      script: env
+      script: /tmp/debug.sh
       register: out
       delegate_to: localhost
 
