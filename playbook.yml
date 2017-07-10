@@ -11,8 +11,8 @@
  #   PYTHONPATH: "/usr/lib/python2.7/site-packages/hpOneView/oneview-ansible/library"
   
   tasks:
-    - name: grr
-      script: debug.sh
+    - name: grr2
+      shell: debug.sh
       register: out
       delegate_to: localhost
       args:
