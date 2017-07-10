@@ -12,5 +12,5 @@
   
   tasks:
     - name: Run 1
-      shell: env > /tmp/gee.log
+      shell: 'env > /tmp/gee.log'
       delegate_to: localhost
