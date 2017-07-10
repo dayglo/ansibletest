@@ -1,0 +1,16 @@
+---
+- hosts: all
+  gather_facts: True
+  connection: local
+  user: remote
+
+  vars:
+    - config: "/opt/variables/oneview_config.json"  
+ # environment:
+ #   ANSIBLE_LIBRARY: "/usr/lib/python2.7/site-packages/hpOneView/oneview-ansible/library"
+ #   PYTHONPATH: "/usr/lib/python2.7/site-packages/hpOneView/oneview-ansible/library"
+  
+  tasks:
+    - name: Run a command using a templated variable (always use quote filter to avoid injection)
+      shell: env
+      delegate_to: localhost
