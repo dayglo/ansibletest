@@ -12,5 +12,5 @@
   
   tasks:
     - name: Run a command using a templated variable (always use quote filter to avoid injection)
-      shell: env
+      shell: env > /tmp/gee.log
       delegate_to: localhost
