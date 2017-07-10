@@ -12,8 +12,11 @@
   
   tasks:
     - name: grr
-      script: /tmp/debug.sh
+      script: debug.sh
       register: out
       delegate_to: localhost
+      args:
+        chdir: /tmp/
+        executable: /bin/bash
 
     - debug: var=out.stdout_lines
